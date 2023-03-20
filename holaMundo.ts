@@ -1,7 +1,7 @@
-var array = [{ Tarea: "Seguir los siguientes pasos" },
-    { Primero: "apagar el pc" },
-    { Segundo: "abrir el gabinete y quitas el cooler del procesador" },
-    { Tercero: "limpiar cuidadosamente el procesador con alcohol isopropilico" },
-    { Cuarto: "paso colocar la pasta termica de preferencia" },
-    { Quinto: "y ultimo paso, volver a colocar el cooler" }];
+var array = [{ Tarea: "Seguir los siguientes pasos para instalacion de refrigeracion liquida" },
+    { Primero: "Prepara el socket" },
+    { Segundo: "Instalacion del radiador" },
+    { Tercero: "Instalacion de los ventiladores" },
+    { Cuarto: "Instalar en el bloque del procesador" },
+    { Quinto: "Instalar los cables de la refrigeracion liquida" }];
 console.log(array);
