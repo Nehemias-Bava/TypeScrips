@@ -1,4 +1,7 @@
-const base = 5;
-const altura = 10;
+import * as rls from"readline-sync";
 
-console.log(base * altura)
+const base: number = rls.questionInt("Ingrese la base: ");
+const altura: number = rls.questionInt("Ingrese la altura: ");
+const area: number = base * altura; 
+
+console.log("El area es: ", area);
