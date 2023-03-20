@@ -1,5 +1,3 @@
-
-
 import * as rls from "readline-sync";
 
 const lap1: number = rls.questionInt("ingrese tiempo de la 1ra vuelta");
