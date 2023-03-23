@@ -10,3 +10,4 @@ if (edadUsuario >= 18) {
 } else{
     console.log("El usuario es menor de edad");
 }
+

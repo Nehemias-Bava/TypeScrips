@@ -7,3 +7,4 @@ const totalAPagar: number = precio - descuento;
 
 console.log("Tienes un descuento de: ", descuento);
 console.log("El total a pagar seria: ", totalAPagar);
+

@@ -1,4 +1,4 @@
-// Ejercicio aplicar descuento
+// Ejercicio aplicar descuento.
 
 import * as rls from"readline-sync";
 
