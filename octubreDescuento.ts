@@ -8,9 +8,8 @@ descuento o no */
 
 import * as rls from "readline-sync";
 
-
-let precio : number = rls.questionInt("Ingrese el valor del producto: ");
 let cantProducto : number = rls.questionInt("Ingrese la cantidad de los producto que compro: ");
+let precio : number = rls.questionInt("Ingrese el valor del producto: ");
 const mes : string = rls.question("Ingrese el mes: ");
 let descuento : number = 0;
 let subtotal : number = 0;

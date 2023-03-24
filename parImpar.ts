@@ -11,7 +11,9 @@ import * as rls from "readline-sync";
 let num : number = rls.questionInt("Ingrese un numero: ");
 
 
-if(num % 2 == 0){
+if(num == 0){
+    console.log("El numero que ingresaste es: ", num);
+} else if(num % 2 == 0){
     console.log("El numero", num, "es par");
 } else{
     console.log("El numero", num, "es impar");
