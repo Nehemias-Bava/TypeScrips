@@ -18,7 +18,7 @@ let precioFinal : number;
 
 subtotal = (precio * cantProducto);
 descuento = (subtotal * 0.15);
-precioFinal = (subtotal - descuento)
+precioFinal = (subtotal - descuento);
 
 
 switch (mes) {
