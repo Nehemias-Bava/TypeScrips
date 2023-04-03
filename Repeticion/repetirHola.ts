@@ -1,3 +1,7 @@
+/*•Escriba un programa que salude 5 veces por
+pantalla de forma secuencial */
+
+
 import * as rls from "readline-sync"
 
 

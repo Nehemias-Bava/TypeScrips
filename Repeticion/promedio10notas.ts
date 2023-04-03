@@ -1,3 +1,8 @@
+/* •Escriba un programa que solicite 10 números
+al usuario y calcule el promedio de las mismas.
+Luego, muestre el resultado por pantalla. */
+
+
 import * as rls from "readline-sync"
 
 let nota, suma, promedio, contador : number;
