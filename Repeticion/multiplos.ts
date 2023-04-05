@@ -16,5 +16,5 @@ for(let n : number = 1; n <= 100; n++){
         result = result + n + " ";
     }
 }
-
+console.log(result);
 
