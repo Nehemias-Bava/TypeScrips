@@ -5,14 +5,20 @@
 
 import * as rls from "readline-sync"
 
-let numeroIngresado, negativos, positivos : number;
-numeroIngresado = -1;
-negativos = 0;
-positivos = 0;
-let suma : number = 0;
-let multiplicación : number = 0;
+let num : number = rls.questionInt("Ingrese un numero: ");
+let i = 0;
+let min = 0;
 
+while(num != 0){
+    if(i <= num){
+        i = num;
+    }else if(min >= num){
+        min = num;
+    }
+    num = rls.questionInt("Ingrese un numero: ");
+}
 
-
+console.log("El numero maximo ingresado:", i);
+console.log("El numero minimo ingresado: ", min);
 
 
