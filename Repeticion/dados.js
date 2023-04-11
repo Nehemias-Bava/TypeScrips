@@ -12,4 +12,4 @@ var dado = 1 / 6;
 var nDados = rls.questionInt("Con cuantos dados tiras?: ");
 var probabilidad = 0;
 probabilidad = Math.pow(dado, nDados);
-console.log("La probabilidad de sacar todos los dados 6 es de:", probabilidad);
+console.log("La probabilidad de sacar 6 en ", nDados, " dados es de:", probabilidad);

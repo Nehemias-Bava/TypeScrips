@@ -17,4 +17,4 @@ let probabilidad : number = 0;
 
 probabilidad = dado ** nDados;
 
-console.log("La probabilidad de sacar todos los dados 6 es de:", probabilidad);
+console.log("La probabilidad de sacar 6 en ", nDados, " dados es de:", probabilidad);
