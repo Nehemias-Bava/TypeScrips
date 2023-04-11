@@ -14,12 +14,13 @@ notas, mostrará un mensaje de error y continuará con otro alumno) */
 import * as rls from "readline-sync"
 
 
-let nombre : string = "Lio";
+let nombre : string = "";
 let notaFinal : number;
 let nota1 : number = 0;
 let nota2 : number = 0;
 let nota3 : number = 0;
 
+    
 
     while(nombre !== ""){
         nombre = rls.question("Ingrese el nombre: ");                                                                                       
