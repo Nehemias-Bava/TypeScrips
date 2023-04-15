@@ -151,5 +151,9 @@
         "veces",
         "visualice",
         "volverá"
+    ],
+    "cSpell.enabled": false,
+    "cSpell.enableFiletypes": [
+        "typescript"
     ]
 }
