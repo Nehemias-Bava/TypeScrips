@@ -14,7 +14,7 @@ notas, mostrará un mensaje de error y continuará con otro alumno) */
 import * as rls from "readline-sync"
 
 
-let nombre : string = "";
+let nombre : string = rls.question("Ingrese el nombre del alumno: ");
 let notaFinal : number;
 let nota1 : number = 0;
 let nota2 : number = 0;
@@ -22,8 +22,7 @@ let nota3 : number = 0;
 
     
 
-    while(nombre !== ""){
-        nombre = rls.question("Ingrese el nombre: ");                                                                                       
+    while(nombre !== ""){                                                                                     
         nota1 = rls.questionFloat("Ingrese la nota de practica: ");
         nota2 = rls.questionFloat("Ingrese la nota de problemas: ");
         nota3 = rls.questionFloat("Ingrese la nota de teorica: ");
