@@ -4,5 +4,9 @@
     "package": "^1.0.1",
     "readline-sync": "^1.4.10",
     "version": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.12",
+    "tslib": "^2.5.0"
   }
 }
