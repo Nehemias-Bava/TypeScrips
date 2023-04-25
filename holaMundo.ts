@@ -6,3 +6,4 @@ var array = [{ Tarea: "Seguir los siguientes pasos para instalacion de refrigera
     { Quinto: "Instalar los cables de la refrigeracion liquida" }];
     
 console.log(array);
+
