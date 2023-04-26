@@ -22,6 +22,7 @@ let ceros = 0;
 
 // El {for...of} ejecuta un bloque de codigo para cada elemento de un objeto iterable;
 //En este caso 'num' & 'numeros';
+
 for (const num of numeros) {
     if (num > 0) {
     positivos++;
