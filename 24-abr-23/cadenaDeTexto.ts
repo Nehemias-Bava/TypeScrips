@@ -6,11 +6,11 @@ const cadenaDeTexto: string = "El éxito es aprender a ir de fracaso en fracaso 
 let contador : number = 0;
 
 function contarMayus(cadenaDeTexto: string): number {
-    for (let i: number =0; i<cadenaDeTexto.length; i++){
-        if (cadenaDeTexto[i]=== cadenaDeTexto[i].toUpperCase()&& cadenaDeTexto[i]!== cadenaDeTexto[i].toLowerCase() ){
+    for (let i: number = 0; i < cadenaDeTexto.length; i++){
+        if (cadenaDeTexto[i] === cadenaDeTexto[i].toUpperCase() && cadenaDeTexto[i] !== cadenaDeTexto[i].toLowerCase() ){
             contador++;
         }   
     }
         return contador;
 }
-console.log(`La cantidad de palabras que empiezan con mayusculas es : ${contarMayus(cadenaDeTexto)}`);
+console.log(`La cantidad de palabras que empiezan con mayusculas son : ${contarMayus(cadenaDeTexto)}`);
