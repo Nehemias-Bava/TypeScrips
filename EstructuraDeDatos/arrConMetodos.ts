@@ -35,14 +35,10 @@ function contarNumeros(numeros: number[]): [number, number, number] {
     return [positivos, negativos, ceros];
 }
 
-function ordenarNumeros(numeros: number[]): number[] {
-    return numeros.sort((a, b) => a - b);
-}
-
 const [positivos, negativos, ceros] = contarNumeros(numeros);
-const numerosOrdenados = ordenarNumeros(numeros);
 
-console.log(`Numeros ordenados: ${numerosOrdenados.join(", ")}`);
+
+
 console.log(`Numeros positivos: ${positivos}`);
 console.log(`Numeros negativos: ${negativos}`);
 console.log(`Numeros ceros: ${ceros}`);
