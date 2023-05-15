@@ -15,3 +15,5 @@ while(contador <= cantNotas){
 promedio = suma / cantNotas
 
 console.log("El promedio de las notas es de: ", promedio)
+
+

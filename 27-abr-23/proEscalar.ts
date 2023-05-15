@@ -4,8 +4,8 @@ Calcule el producto escalar entre los dos arreglos: */
 import * as rls from "readline-sync"
 
 let dim: number = rls.questionInt("Ingrese la cantidad de N :");
-let arr1: number [] = new Array[dim];
-let arr2: number []= new Array[dim];
+let arr1: number [] = new Array(dim);
+let arr2: number []= new Array(dim);
 
 let cargaArr = (arr: number[]): void =>{
     for(let i: number = 0; i < arr.length; i++) {
