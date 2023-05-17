@@ -8,32 +8,28 @@ cómo representar la información */
 import * as rls from "readline-sync"
 
 
-type Alumno = {
-    nombre: string;
-    notas: number[];
-};
-
-
-function cargarNotas(alumno: Alumno): void {
+function cargarNotas(nombre: string, notas: number[]): void {
     for (let i = 0; i < 3; i++) {
-        const nota = rls.questionInt(`Ingrese la nota del trimestre ${i + 1} para ${alumno.nombre}: `);
-        alumno.notas.push(nota);
+        const nota = rls.questionInt(`Ingrese la nota del trimestre ${i + 1} para ${nombre}: `);
+        notas.push(nota);
     }
 }
 
-
-function calcularPromedio(alumno: Alumno): number {
-    const sumaNotas = alumno.notas.reduce((a, b) => a + b, 0);
-    return sumaNotas / alumno.notas.length;
+//Busque y utilice el metodo ' .reduce ': Permite iterar sobre los elementos dentro de la array y convinarlos en un resultado;
+function calcularPromedio(notas: number[]): number {
+    const sumaNotas = notas.reduce((a, b) => a + b, 0);
+    return sumaNotas / notas.length;
 }
 
 
-const alumno: Alumno = {
-    nombre: rls.question("Ingrese el nombre del alumno: "),
-    notas: []
-};
-cargarNotas(alumno);
+const nombreAlumno = rls.question("Ingrese el nombre del alumno: ");
 
 
-const promedio = calcularPromedio(alumno);
-console.log(`El promedio anual de ${alumno.nombre} es: ${promedio}`);
+const notasAlumno: number[] = [];
+
+
+cargarNotas(nombreAlumno, notasAlumno);
+
+
+const promedio = calcularPromedio(notasAlumno);
+console.log(`El promedio anual de ${nombreAlumno} es: ${promedio}`);
