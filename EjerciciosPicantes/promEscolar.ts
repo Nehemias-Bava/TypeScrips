@@ -7,47 +7,59 @@ cómo representar la información */
 
 import * as rls from "readline-sync"
 
+interface Alumno {
+    nombre: string;
+    notasTrimestres: number[][];
+}
 
-let nota1: number = 0;
-let nota2: number = 0;
-let nota3: number = 0;
-let promedio: number = 0;
-
-let trimestres1: number = 0;
-let trimestres2: number = 0;
-let trimestres3: number = 0;
-
-let promAnual: number = 0;
-
-let nombre: string;
-
-function cargarAlumnos() {
-    const cantidadAlumnos: number = rls.question("Ingrese cuantos Alumnos son: ");
-    const nombresAlumnos: string[] = [];
+function cargarAlumnos(): Alumno[] {
+    const cantidadAlumnos: number = rls.question("Ingrese la cantidad de alumnos: ");
+    const alumnos: Alumno[] = [];
 
     for (let i = 0; i < cantidadAlumnos; i++) {
-        nombre = rls.question("Ingrese el nombre del alumno " + (i + 1) + ":");
-        nombresAlumnos.push(nombre);
-    }
-    console.log("Los nombres de los alumnos son: ");
-    for (let i = 0; i < nombresAlumnos.length; i++) {
-        console.log("- " + nombresAlumnos[i]);
-    }
-}
-cargarAlumnos();
+    const nombre: string = rls.question("Ingrese el nombre del alumno " + (i + 1) + ": ");
+    const notasTrimestres: number[][] = [];
 
-function promTrimestre() {
-    nota1 = rls.questionInt("Ingrese la primer nota: ");
-    nota2 = rls.questionInt("Ingrese la segunda nota: ");
-    nota3 = rls.questionInt("Ingrese la tercer nota: ");
-    
-    if(nota1 <= 0 || nota1 > 10 || nota2 <= 0 || nota2 > 10 || nota3 <= 0 || nota3 > 10){
-        console.log("Error");
-    }else{
-        promedio = (nota1 + nota2 + nota3) / 3;
-        console.log("La nota final de", [], " es de:", [promedio]);
-    } 
+    for (let j = 0; j < 3; j++) {
+        const notasTrimestre: number[] = [];
+        for (let k = 0; k < 3; k++) {
+            const nota: number = rls.questionInt("Ingrese la nota del trimestre " + (j + 1) + " para el alumno " + nombre + ": ");
+        notasTrimestre.push(nota);
+        }
+        notasTrimestres.push(notasTrimestre);
+    }
+
+    const alumno: Alumno = {
+        nombre: nombre,
+        notasTrimestres: notasTrimestres
+    };
+    alumnos.push(alumno);
+    }
+    return alumnos;
 }
-promTrimestre();
+
+function calcularPromedioTrimestral(alumnos: Alumno[], nombreAlumno: string): number[] {
+    for (let i = 0; i < alumnos.length; i++) {
+        if (alumnos[i].nombre === nombreAlumno) {
+            const notasTrimestresAlumno: number[][] = alumnos[i].notasTrimestres;
+            const promediosTrimestrales: number[] = [];
+
+            for (let j = 0; j < notasTrimestresAlumno.length; j++) {
+                const notasTrimestre: number[] = notasTrimestresAlumno[j];
+                const promedioTrimestre: number = notasTrimestre.reduce((a, b) => a + b) / notasTrimestre.length;
+                promediosTrimestrales.push(promedioTrimestre);
+            }
+            return promediosTrimestrales;
+        }
+    }
+    return [];
+}
+    const listaAlumnos: Alumno[] = cargarAlumnos();
+    const nombreBuscado: string = rls.question("Ingrese el nombre del alumno para calcular los promedios trimestrales:  ");
+    const promediosTrimestrales: number[] = calcularPromedioTrimestral(listaAlumnos, nombreBuscado);
+    console.log("Los promedios trimestrales del alumno " + nombreBuscado + " son: ");
+    for (let i = 0; i < promediosTrimestrales.length; i++) {
+        console.log("Trimestre " + (i + 1) + ": " + promediosTrimestrales[i]);
+}
 
 
